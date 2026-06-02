@@ -1,0 +1,165 @@
+{
+  "title": "أعظم لحظات السينما",
+  "language": "ar-EG",
+  "format": { "aspectRatio": "9:16", "platforms": ["instagram", "facebook", "tiktok"], "targetDurationSec": 55 },
+  "episodes": [
+    {
+      "id": "ep1-top-endings",
+      "title": "أقوى 5 نهايات في تاريخ السينما",
+      "theme": "endings",
+      "hook": "5 نهايات خلّت الجمهور يفضل ساكت في السينما… النمرة 1 أسطورة",
+      "coverPrompt": "Split-screen cinematic collage of 5 iconic movie endings, dark dramatic lighting, bold red ranking numbers, 'TOP 5 ENDINGS' title, high contrast, 9:16, 8k.",
+      "caption": "أعظم 5 نهايات في تاريخ السينما 🎬 إنت شُفت كام منهم؟ النمرة 1 مفيش زيها 👑",
+      "hashtags": ["#أفلام", "#سينما", "#نهايات_صادمة", "#الأب_الروحي", "#movies", "#foryou", "#fyp", "#اكسبلور"],
+      "segments": [
+        {
+          "rank": 5,
+          "title": "Fight Club",
+          "year": 1999,
+          "onScreenText": "نهاية قلبت مفهوم الواقع",
+          "sceneUrl": "https://www.youtube.com/watch?v=nHKlfGq3bOA",
+          "summary": "موظف زهقان وحياته فاضية بيأسس مع تايلر دردن نادي ضرب سري بيكبر ويبقى حركة فوضى. وفي الآخر تتصدم: تايلر مش موجود أصلاً — هو شخصية تانية جوّه دماغه! بيطلق النار على نفسه عشان يتخلّص منه، ويقف ماسك إيد حبيبته يتفرّجوا على المباني بتنهار."
+        },
+        {
+          "rank": 4,
+          "title": "باب الحديد",
+          "year": 1958,
+          "onScreenText": "أجرأ نهاية مصرية في زمنها",
+          "sceneUrl": "https://www.youtube.com/watch?v=vn-V6vrI2vE",
+          "summary": "قناوي بياع الجرايد الأعرج الوحيد بيتجنّن من حبه لهنومة لحد ما يحاول يخطفها. النهاية: الناس بتمسكه وبيلبسوه بدلة المجانين وهو بيتوسّل ويعيط. مشهد بيكسر القلب وبيكشف قسوة المجتمع على الإنسان المهمّش. تحفة مصرية سبقت زمنها."
+        },
+        {
+          "rank": 3,
+          "title": "Citizen Kane",
+          "year": 1941,
+          "onScreenText": "السر اللي فهمناه إحنا بس",
+          "sceneUrl": "https://www.youtube.com/watch?v=fr93wwtiKQM",
+          "summary": "أغنى راجل في الدنيا بيموت وحيد في قصره ويقول كلمة غامضة: Rosebud. طول الفيلم الكل بيدوّر على معناها ومحدش يعرف. النهاية بس بتكشفلنا إحنا المتفرجين إنها زحليقة طفولته الفقيرة السعيدة — رمز البراءة اللي ضيّعها وهو بيجري ورا الفلوس والسلطة."
+        },
+        {
+          "rank": 2,
+          "title": "Se7en",
+          "year": 1995,
+          "onScreenText": "أصدم نهاية في تاريخ التشويق",
+          "sceneUrl": "https://www.youtube.com/watch?v=_Qgyu3JSWGQ",
+          "summary": "محققين بيطاردوا قاتل بيقتل ضحاياه على الخطايا السبع المميتة. في النهاية القاتل بيسلّم نفسه وبيوصّل صندوق غامض للمحقق… وجواه راس مراته الحامل. صرخة What's in the box بقت أشهر لحظة رعب نفسي في تاريخ السينما."
+        },
+        {
+          "rank": 1,
+          "title": "The Godfather",
+          "year": 1972,
+          "onScreenText": "اللحظة اللي بقى فيها الوحش",
+          "sceneUrl": "https://www.youtube.com/watch?v=-eu3DWJjYP0",
+          "summary": "مايكل اللطيف اللي كان عايز حياة نضيفة بقى زعيم المافيا الجديد. في آخر مشهد مراته كاي بتسأله عن شغله، بيكدب عليها، والباب بيتقفل في وشها وهو بيستقبل التحية كدون. اللحظة اللي ماتت فيها إنسانيته للأبد. أعظم نهاية صامتة في السينما."
+        }
+      ]
+    },
+    {
+      "id": "ep2-top-mafia",
+      "title": "أحسن 5 أفلام مافيا في التاريخ",
+      "theme": "mafia",
+      "hook": "لو بتحب أفلام المافيا… الـ5 دول مدرسة. والنمرة 1 بتتقاس عليها كل الأفلام",
+      "coverPrompt": "Cinematic mafia vertical poster, men in dark suits and fedoras in shadow, cigar smoke, warm amber low-key light, bold gold 'TOP 5 MAFIA MOVIES' text, high contrast, 9:16, 8k.",
+      "caption": "أقوى 5 أفلام مافيا اتعملت 🔫🤵 تختلف معايا في الترتيب؟ اكتب رأيك 👇",
+      "hashtags": ["#مافيا", "#أفلام", "#الأب_الروحي", "#godfather", "#goodfellas", "#سينما", "#mafia", "#foryou", "#fyp"],
+      "segments": [
+        {
+          "rank": 5,
+          "title": "Pulp Fiction",
+          "year": 1994,
+          "onScreenText": "تارانتينو غيّر قواعد اللعبة",
+          "sceneUrl": "https://www.youtube.com/watch?v=jYID_csTvos",
+          "summary": "تارانتينو بيحكي كذا قصة عصابات متشابكة بترتيب مقلوب: قتلة بيتفلسفوا، ملاكم بيهرب، ومافيا وحب وخيانة. مشهد رقصة فينسنت وميا في المطعم بقى أيقونة عالمية. الفيلم اللي غيّر شكل السينما المستقلة للأبد."
+        },
+        {
+          "rank": 4,
+          "title": "The Departed",
+          "year": 2006,
+          "onScreenText": "أصدم خيانة في الأسانسير",
+          "sceneUrl": "https://www.youtube.com/watch?v=b66y1LHixqY",
+          "summary": "جاسوسين في حرب خفية — واحد بوليس متخفّي جوّه المافيا، وواحد مافيا متخفّي جوّه البوليس — وكل واحد بيدوّر على التاني قبل ما ينكشف. توتر بيكتم النفس لحد مشهد الأسانسير الصادم. الفيلم اللي كسب بيه سكورسيزي الأوسكار أخيراً."
+        },
+        {
+          "rank": 3,
+          "title": "Goodfellas",
+          "year": 1990,
+          "onScreenText": "أشهر لقطة واحدة في التاريخ",
+          "sceneUrl": "https://www.youtube.com/watch?v=4kHnWry8ago",
+          "summary": "قصة صعود وسقوط هنري هيل في عالم المافيا — من طفل بيحلم بالعصابات لراجل غارق في الجريمة والإدمان والخيانة. لقطة الـCopacabana الطويلة 3 دقايق من غير قطع أشهر لقطة في تاريخ السينما. إيقاع وموسيقى بتدمنهم."
+        },
+        {
+          "rank": 2,
+          "title": "The Godfather Part II",
+          "year": 1974,
+          "onScreenText": "قبلة الموت 💀",
+          "sceneUrl": "https://www.youtube.com/watch?v=qEtuz1ktxeA",
+          "summary": "قصتين بالتوازي: صعود فيتو الشاب وهو بيبني الإمبراطورية، وسقوط مايكل الأخلاقي وهو بيكبّرها ويخسر روحه وعيلته. مشهد قبلة الموت لأخوه فريدو من أقسى لحظات السينما. كتير بيشوفوها تكملة أحسن من الأصل."
+        },
+        {
+          "rank": 1,
+          "title": "The Godfather",
+          "year": 1972,
+          "onScreenText": "أعظم فيلم مافيا في التاريخ 👑",
+          "sceneUrl": "https://www.youtube.com/watch?v=5nvA2t_JanM",
+          "summary": "عيلة كورليوني وأكبر مدرسة في أفلام المافيا كلها. الأب فيتو بيحكم العالم السفلي بصوت هادي، والابن مايكل بيتحوّل من شاب طيب لزعيم بدم بارد. مشهد المطعم اللي بيقتل فيه سولوتزو والكابتن = لحظة ولادة الوحش. الفيلم اللي بيتقاس عليه كل فيلم عصابات بعد كده."
+        }
+      ]
+    },
+    {
+      "id": "ep3-top-cinematography",
+      "title": "أجمل 5 أفلام من ناحية التصوير السينمائي",
+      "theme": "cinematography",
+      "hook": "5 أفلام كل فريم فيها يتعلّق لوحة. رقم 1 ماحدش لحقه لحد دلوقتي",
+      "coverPrompt": "Stunning cinematic vertical collage of 5 visually iconic frames — orange desert, snowy forest, sci-fi haze — painterly lighting, bold 'TOP 5 CINEMATOGRAPHY' text, ultra high contrast, 9:16, 8k.",
+      "caption": "5 أفلام التصوير فيها فن لوحده 🎨🎥 أي واحدة شكلها أحلى عندك؟",
+      "hashtags": ["#تصوير_سينمائي", "#cinematography", "#أفلام", "#سينما", "#film", "#foryou", "#fyp", "#اكسبلور"],
+      "segments": [
+        {
+          "rank": 5,
+          "title": "Dune",
+          "year": 2021,
+          "cinematographer": "Greig Fraser",
+          "onScreenText": "الصحرا بحجم أسطوري",
+          "sceneUrl": "https://www.youtube.com/watch?v=6hU78elkK6Q",
+          "summary": "بول أتريديز وريث شاب بيواجه قدره على كوكب الرمل الصحراوي أراكيس. التصوير بيخلّي الصحرا والديدان العملاقة بحجم أسطوري يخطف الأنفاس، بإضاءة طبيعية وألوان ترابية مهيبة. ملحمة بصرية بمعنى الكلمة."
+        },
+        {
+          "rank": 4,
+          "title": "The Revenant",
+          "year": 2015,
+          "cinematographer": "Emmanuel Lubezki",
+          "onScreenText": "اتصوّر بنور الشمس الطبيعي",
+          "sceneUrl": "https://www.youtube.com/watch?v=Yvm_WtEI2JI",
+          "summary": "صياد بينجو من موت محقق بعد هجوم دب وحشي وبيزحف في التلج عشان ينتقم. اللي بيخلّيه أسطورة إنه اتصوّر كله بنور الشمس والنار الطبيعي بس — مفيش إضاءة صناعية — فطلع كل مشهد كأنه حقيقي بتتنفّس فيه البرد والدم."
+        },
+        {
+          "rank": 3,
+          "title": "1917",
+          "year": 2019,
+          "cinematographer": "Roger Deakins",
+          "onScreenText": "الفيلم كله لقطة واحدة!",
+          "sceneUrl": "https://www.youtube.com/watch?v=da6dQxFYCiI",
+          "summary": "جنديين في مهمة مستحيلة لإنقاذ كتيبة وقت الحرب العالمية الأولى. ديكنز صوّر الفيلم كأنه لقطة واحدة طويلة من غير قطع، فتحس إنك ماشي معاهم لحظة بلحظة جوّه جحيم الحرب. تحفة تقنية بصرية."
+        },
+        {
+          "rank": 2,
+          "title": "Blade Runner 2049",
+          "year": 2017,
+          "cinematographer": "Roger Deakins",
+          "onScreenText": "أجمل استخدام للون في السينما",
+          "sceneUrl": "https://www.youtube.com/watch?v=UXS8E4szcSc",
+          "summary": "روبوت بيكتشف سر خطير عن أصله في مستقبل مظلم وممطر. مشهد فيغاس الغارق في الضباب البرتقاني بيعتبر أجمل استخدام للون في السينما الحديثة — كل فريم لوحة. كسب عنه ديكنز الأوسكار."
+        },
+        {
+          "rank": 1,
+          "title": "Lawrence of Arabia",
+          "year": 1962,
+          "cinematographer": "Freddie Young",
+          "onScreenText": "أعظم لقطة صحرا في التاريخ 🏜️",
+          "sceneUrl": "https://www.youtube.com/watch?v=IzNiDDyeqvM",
+          "summary": "ضابط إنجليزي بيوحّد قبايل العرب في الصحرا وقت الحرب العالمية الأولى. مشهد ظهور علي من السراب — نقطة صغيرة بتكبر في الأفق لمدة دقيقتين كاملين والجمهور حابس نَفَسه — بيعتبر أعظم لقطة صحرا في تاريخ السينما. ديفيد لين رسم الصحرا كأنها كائن حي."
+        }
+      ]
+    }
+  ]
+}

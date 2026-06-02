@@ -23,5 +23,8 @@
       "binding": "R2_BUCKET",
       "bucket_name": "019bde6a-a878-7f1c-9a1d-1fdcdb8f7ab0"
     }
-  ]
+  ],
+  "triggers": {
+    "crons": ["*/15 * * * *"]
+  }
 }

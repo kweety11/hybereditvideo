@@ -1,6 +1,15 @@
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { GoogleGenAI } from "@google/genai";
+import { testConnections, type Platform } from "./social-publisher";
+import {
+  insertPosts,
+  listPosts,
+  processDuePosts,
+  publishNow,
+  type ScheduledPostInput,
+} from "./scheduler";
+import socialSeries from "../../content/social-series.json";
 
 interface Env {
   GEMINI_API_KEY: string;
@@ -8,6 +17,13 @@ interface Env {
   DB: D1Database;
   MOCHA_USERS_SERVICE_API_URL: string;
   MOCHA_USERS_SERVICE_API_KEY: string;
+  // Social publishing credentials (see .dev.vars.example)
+  META_PAGE_ACCESS_TOKEN?: string;
+  IG_BUSINESS_ID?: string;
+  FB_PAGE_ID?: string;
+  TIKTOK_ACCESS_TOKEN?: string;
+  TIKTOK_PRIVACY_LEVEL?: string;
+  SOCIAL_DRY_RUN?: string;
 }
 
 // In-memory store for pending requests (dev only)
@@ -196,4 +212,78 @@ Always use -y flag to overwrite output. Provide safe, valid FFmpeg commands.`,
   }
 });
 
-export default app;
+// ---------------------------------------------------------------------------
+// Social media auto-posting & scheduling
+// ---------------------------------------------------------------------------
+
+// Verify the configured credentials for each platform (read-only).
+app.post("/api/social/test-connection", async (c) => {
+  const statuses = await testConnections(c.env);
+  return c.json({ success: true, platforms: statuses });
+});
+
+// Return the bundled content series (movie-review countdown episodes).
+app.get("/api/social/series", (c) => {
+  return c.json({ success: true, series: socialSeries });
+});
+
+// Queue one or more posts for publishing.
+app.post("/api/social/schedule", async (c) => {
+  try {
+    const body = await c.req.json();
+    const rawPosts = Array.isArray(body.posts) ? body.posts : body.post ? [body.post] : [];
+    if (rawPosts.length === 0) {
+      return c.json({ error: "Provide `post` or `posts`" }, 400);
+    }
+
+    const posts: ScheduledPostInput[] = [];
+    for (const p of rawPosts) {
+      if (!p?.videoUrl || !p?.caption || !Array.isArray(p?.platforms) || p.platforms.length === 0) {
+        return c.json({ error: "Each post needs caption, videoUrl and a non-empty platforms array" }, 400);
+      }
+      posts.push({
+        caption: String(p.caption),
+        hashtags: Array.isArray(p.hashtags) ? p.hashtags.map(String) : [],
+        videoUrl: String(p.videoUrl),
+        platforms: p.platforms as Platform[],
+        scheduledAt: typeof p.scheduledAt === "number" ? p.scheduledAt : undefined,
+      });
+    }
+
+    const ids = await insertPosts(c.env.DB, posts);
+    return c.json({ success: true, scheduled: ids });
+  } catch (error) {
+    return c.json({ error: error instanceof Error ? error.message : "Failed to schedule" }, 500);
+  }
+});
+
+// List all queued / published posts and their status.
+app.get("/api/social/jobs", async (c) => {
+  const posts = await listPosts(c.env.DB);
+  return c.json({ success: true, posts });
+});
+
+// Publish a stored post right now (used for testing).
+app.post("/api/social/publish-now", async (c) => {
+  try {
+    const body = await c.req.json();
+    if (!body?.postId) {
+      return c.json({ error: "postId is required" }, 400);
+    }
+    const result = await publishNow(c.env, String(body.postId));
+    if (!result) {
+      return c.json({ error: "Post not found" }, 404);
+    }
+    return c.json({ success: true, ...result });
+  } catch (error) {
+    return c.json({ error: error instanceof Error ? error.message : "Failed to publish" }, 500);
+  }
+});
+
+export default {
+  fetch: app.fetch,
+  // Cron trigger: publish every pending post whose scheduled time has passed.
+  async scheduled(_controller: ScheduledController, env: Env, ctx: ExecutionContext) {
+    ctx.waitUntil(processDuePosts(env));
+  },
+} satisfies ExportedHandler<Env>;
