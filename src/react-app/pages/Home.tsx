@@ -7,13 +7,14 @@ import CaptionPropertiesPanel from '@/react-app/components/CaptionPropertiesPane
 import AIPromptPanel from '@/react-app/components/AIPromptPanel';
 import PicassoPanel from '@/react-app/components/PicassoPanel';
 import DiCaprioPanel from '@/react-app/components/DiCaprioPanel';
+import SocialPublisherPanel from '@/react-app/components/SocialPublisherPanel';
 import GifSearchPanel from '@/react-app/components/GifSearchPanel';
 import ResizablePanel from '@/react-app/components/ResizablePanel';
 import ResizableVerticalPanel from '@/react-app/components/ResizableVerticalPanel';
 import TimelineTabs from '@/react-app/components/TimelineTabs';
 import { useProject, Asset, TimelineClip, CaptionStyle } from '@/react-app/hooks/useProject';
 import { useVideoSession } from '@/react-app/hooks/useVideoSession';
-import { Sparkles, ListOrdered, Copy, Check, X, Download, Play, Palette, Film } from 'lucide-react';
+import { Sparkles, ListOrdered, Copy, Check, X, Download, Play, Palette, Film, Share2 } from 'lucide-react';
 import type { TemplateId } from '@/remotion/templates';
 
 interface ChapterData {
@@ -33,7 +34,7 @@ export default function Home() {
   const [previewAssetId, setPreviewAssetId] = useState<string | null>(null);
   const [aspectRatio, setAspectRatio] = useState<'16:9' | '9:16'>('16:9');
   const [autoSnap, setAutoSnap] = useState(true); // Ripple delete mode - shift clips when deleting
-  const [activeAgent, setActiveAgent] = useState<'director' | 'picasso' | 'dicaprio'>('director');
+  const [activeAgent, setActiveAgent] = useState<'director' | 'picasso' | 'dicaprio' | 'socialpublisher'>('director');
   const [showGifSearch, setShowGifSearch] = useState(false);
 
   const videoPreviewRef = useRef<VideoPreviewHandle>(null);
@@ -1924,6 +1925,17 @@ export default function Home() {
                 <Film className="w-3.5 h-3.5" />
                 DiCaprio
               </button>
+              <button
+                onClick={() => setActiveAgent('socialpublisher')}
+                className={`flex items-center gap-1.5 px-3 py-2 text-sm font-medium transition-colors ${
+                  activeAgent === 'socialpublisher'
+                    ? 'text-amber-400 border-b-2 border-amber-400 bg-zinc-800/30'
+                    : 'text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/20'
+                }`}
+              >
+                <Share2 className="w-3.5 h-3.5" />
+                Social
+              </button>
             </div>
 
             {/* AI Chat Panels - both mounted to preserve state, hidden via CSS */}
@@ -1979,6 +1991,9 @@ export default function Home() {
                   }}
                   onRefreshAssets={refreshAssets}
                 />
+              </div>
+              <div className={`absolute inset-0 ${activeAgent === 'socialpublisher' ? '' : 'hidden'}`}>
+                <SocialPublisherPanel />
               </div>
             </div>
           </div>
