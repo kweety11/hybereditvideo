@@ -1,0 +1,23 @@
+# Copy this file to `.dev.vars` and fill in real values (kept out of git).
+
+# --- Existing keys ---
+GEMINI_API_KEY=
+OPENAI_API_KEY=
+GIPHY_API_KEY=
+FAL_API_KEY=
+
+# --- Social auto-posting (Meta: Instagram + Facebook share one token) ---
+# Long-lived Page Access Token for the Facebook Page linked to the IG account.
+META_PAGE_ACCESS_TOKEN=
+# Instagram Business/Creator account ID (numeric).
+IG_BUSINESS_ID=
+# Facebook Page ID (numeric).
+FB_PAGE_ID=
+
+# --- Social auto-posting (TikTok Content Posting API) ---
+TIKTOK_ACCESS_TOKEN=
+# SELF_ONLY while the app is unaudited (sandbox). Use PUBLIC_TO_EVERYONE once approved.
+TIKTOK_PRIVACY_LEVEL=SELF_ONLY
+
+# Safety switch: when "true", endpoints log what they WOULD post but don't post.
+SOCIAL_DRY_RUN=true
